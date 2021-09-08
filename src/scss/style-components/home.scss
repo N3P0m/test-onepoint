@@ -1,0 +1,44 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+
+    &-content {
+        margin-top: 168px;
+        text-transform: uppercase;
+    }
+
+    &-subtitle {
+        display: block;
+        margin-bottom: 16px;
+        font-size: $fs-ml;
+        letter-spacing: 0.06em;
+        pointer-events: none;
+    }
+
+    &-title {
+
+        @include gilroy;
+
+        display: inline-block;
+        font-size: $fs-xl;
+        font-weight: $fw-light;
+        line-height: 117px;
+        letter-spacing: 0.05em;
+        pointer-events: none;
+
+        &__extra-bold {
+            font-weight: $fw-extra-bold;
+        }
+    }
+
+    &__btn {
+        pointer-events: painted;
+    }
+}
+
+.upper {
+    position: relative;
+    z-index: 20;
+    display: inherit;
+}

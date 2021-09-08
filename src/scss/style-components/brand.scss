@@ -1,0 +1,139 @@
+.brand {
+    &-heading {
+        margin-top: 169px;
+        margin-bottom: 70px;
+        margin-left: 284px;
+        text-transform: uppercase;
+
+        &--popup {
+            margin-top: 36px;
+            margin-bottom: 25px;
+            margin-left: 0;
+        }
+    }
+
+    &-subtitle {
+        margin-bottom: 5px;
+        margin-left: 5px;
+        font-size: $fs-ml;
+        letter-spacing: 0.06em;
+    }
+
+    &-title {
+
+        @include gilroy;
+
+        font-size: $fs-l;
+        letter-spacing: 0.11em;
+    }
+}
+
+.popup {
+    position: absolute;
+    top: 133px;
+    z-index: 9;
+    display: none;
+    width: 823px;
+    height: 573px;
+    opacity: 0;
+
+    &--active {
+        display: block;
+    }
+
+    &__container {
+        position: absolute;
+        left: 78px;
+        width: 100%;
+        height: 100%;
+        background-color: $color-white;
+        border-radius: 40px;
+    }
+
+    &__content {
+        margin-right: 130px;
+        margin-left: 206px;
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+    }
+}
+
+.advantages {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    height: 265px;
+    margin-right: 34px;
+    margin-left: 160px;
+
+    &__card {
+        position: relative;
+        font-size: $fs-m;
+        background: $color-white;
+        border-radius: 40px;
+        box-shadow: 2.723px 4.193px 116.25px 8.75px rgba(157, 185, 198, 0.39);
+
+        &--big {
+            grid-area: 1/1/3/2;
+            width: 410px;
+            padding: 52px 50px 75px 124px;
+        }
+
+        &--sm {
+            grid-area: 1/2/2/3;
+            width: 264px;
+            padding: 52px 88px 50px 41px;
+        }
+
+        &-icon {
+            position: absolute;
+            top: -30px;
+            width: 68px;
+            // height: 100%;
+        }
+    }
+
+    &__text { font-size: $fs-m; }
+
+    &__btn {
+        display: block;
+        grid-area: 2/2/3/3;
+        align-self: end;
+        justify-self: start;
+        margin: 0;
+    }
+
+    &__list {
+        display: none;
+        margin-bottom: 60px;
+    }
+
+    &__item { margin-bottom: 18px; }
+
+    &__number {
+
+        @include gilroy;
+
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: $fs-m;
+        font-weight: $fw-extra-bold;
+        color: $color-blue-100;
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.6s;
+}
+
+@keyframes fade {
+
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

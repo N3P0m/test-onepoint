@@ -1,0 +1,51 @@
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.navigation {
+    margin: 0 auto;
+    margin-top: 26px;
+
+    &__list {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__item {
+
+        @include circe;
+
+        font-size: $fs-xs;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+
+        & + & {
+            margin-left: 50px;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        padding: 0;
+        background: transparent;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            display: block;
+            width: 1px;
+            height: 25px;
+            content: "";
+            background-color: $color-black;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__img {
+        width: 22px;
+        height: 19px;
+    }
+}
